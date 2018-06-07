@@ -1,0 +1,5 @@
+Keras==2.2.0
+numpy==1.14.*
+protobuf==3.5.*
+# tensorflow-gpu==1.8.*
+tensorflow-gpu==1.8.*
