@@ -29,8 +29,6 @@ training=df.sample(130000)
 # np.random.shuffle(training)
 max_words = 10000
 
-
-
 # create our training data from the tweets
 # train_x = [str(x[1]) for x in training]
 train_x = np.array(training.get('text'))
