@@ -10,7 +10,7 @@ import csv
 # and to only take data from certain columns
 # training = np.genfromtxt('training.1600000.processed.noemoticon.head.csv', delimiter=',', skip_header=1, usecols=(0, 5), dtype=None, encoding='latin-1')
 # training = np.random.choice(training)
-df = pd.read_csv('training.1600000.processed.noemoticon.csv', encoding='latin-1', verbose="true", keep_default_na=False, na_values=[], delimiter=',', dtype=[('target', np.uint8),('ids', np.uint8), ('date', str), ('flag', str), ('user', str), ('text', str)], names=['target', 'ids', 'date', 'flag', 'user', 'text'] )
+df = pd.read_csv('training.1600000.processed.noemoticon.MT830.csv', encoding='cp1252', verbose="true", keep_default_na=False, na_values=[], delimiter=',', dtype=[('target', np.uint8),('ids', np.uint8), ('date', str), ('flag', str), ('user', str), ('text', str)], names=['target', 'ids', 'date', 'flag', 'user', 'text'] )
 # max_words=3000
 training=df.sample(130000)
 # df.to_csv("training.1600000.processed.noemoticon.1000.csv", header='false', index='false')
