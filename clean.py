@@ -13,7 +13,7 @@ def func(columns):
     columns_lowerd = str(columns).lower()
     columns_cleaned_1rstPass = re.sub(combined_re, " ", columns_lowerd )
 
-    # Remove repeated <3 letter to one copy.
+    # Remove repeated >=3 letter to one copy.
     repeat_re = re.compile(r'(\w)(\1{2,})')
     repl = r'\1'
     columns_cleaned_2ndPass = re.sub(repeat_re, repl , columns_cleaned_1rstPass )
