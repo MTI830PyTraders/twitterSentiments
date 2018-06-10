@@ -7,7 +7,7 @@ df = pd.read_csv('training.1600000.processed.noemoticon.csv', encoding='cp1252',
 def func(columns):
     # @[a-z0-9_]+) : remove twitter user beginning with prefix '@'
     # (https?://(?:[-\w.]|(?:%[\da-fA-F]{2}))+) : remove urls starting with 'http(s)'
-    combined_re = re.compile("(@[a-z0-9_]+)|(https?://(?:[-\w.]|(?:%[\da-fA-F]{2}))+)")
+    combined_re = re.compile(r"http\S+")
 
     # Lower cases
     columns_lowerd = str(columns).lower()
